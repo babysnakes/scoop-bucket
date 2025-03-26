@@ -1,0 +1,13 @@
+{
+  "version": "v0.1.1",
+  "description": "A utility to set Roon specific tags in flac files. This is for the development version.",
+  "homepage": "https://babysnakes.github.io/roon-tagger/",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/babysnakes/roon-tagger/releases/download/v0.1.1/roon-tagger_v0.1.1_win-x64.zip"
+    }
+  },
+  "extract_dir": "roon-tagger_v0.1.1_win-x64",
+  "license":"MIT",
+  "bin": "roon-tagger.exe"
+}
