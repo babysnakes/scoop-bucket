@@ -1,0 +1,23 @@
+{
+  "version": "v0.1.0",
+  "description": "A local DNS server that resolves hosts in the .local domain",
+  "homepage": "https://www.github.com/babysnakes/dot-local-dns/",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/babysnakes/dot-local-dns/releases/download/v0.1.0/dot-local-dns_0.1.0_x64.zip",
+      "hash": "8C18823D0E4E832C0D2382FE71E72CDAC6B9D260ED8C7D9BBB4DC8D29DA5885C",
+      "extract_dir": "dot-local-dns_0.1.0_x64"
+    }
+  },
+  "license":"MIT",
+  "shortcuts": [
+    [
+        "dot-local-dns.exe",
+        "DotLocal-DNS"
+    ]
+  ],
+  "post_uninstall": [
+    "if ($cmd -eq 'uninstall') {Remove-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" -Name \"DotLocal-DNS\" -ErrorAction SilentlyContinue}",
+    "if ($cmd -eq 'uninstall') {Remove-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run\" -Name \"DotLocal-DNS\"-ErrorAction SilentlyContinue}"
+  ]
+}
